@@ -16,7 +16,7 @@ use std::{
     time::Instant,
 };
 
-use bio_apis::rcsb;
+// use bio_apis::rcsb;
 use lin_alg::f64::Vec3;
 use na_seq::{AtomTypeInRes, Element};
 use regex::Regex;
@@ -413,8 +413,9 @@ impl MmCif {
 
     /// Download Load from DrugBank from the RCSB Protein Data Bank. (PDB)
     pub fn load_rcsb(ident: &str) -> io::Result<Self> {
-        let data_str =
-            rcsb::load_cif(ident).map_err(|e| io::Error::other(format!("Error loading: {e:?}")))?;
-        Self::new(&data_str)
+        unimplemented!()
+        // let data_str =
+        //     rcsb::load_cif(ident).map_err(|e| io::Error::other(format!("Error loading: {e:?}")))?;
+        // Self::new(&data_str)
     }
 }

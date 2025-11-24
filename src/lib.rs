@@ -4,14 +4,14 @@
 //! The `generic` label in names in this module are to differentiate from ones used in more specific
 //! applications.
 
-pub mod gro;
+// pub mod gro;
 pub mod mmcif;
 pub mod mol2;
-pub mod pdbqt;
+// pub mod pdbqt;
 pub mod sdf;
 
 pub mod ab1;
-pub mod map;
+// pub mod map;
 
 pub mod dat;
 pub mod frcmod;
@@ -20,7 +20,7 @@ pub mod orca;
 
 pub mod amber_typedef;
 mod bond_inference;
-pub mod cif_sf;
+// pub mod cif_sf;
 mod mmcif_aux;
 pub mod prmtop;
 pub mod xyz;
@@ -35,13 +35,13 @@ use std::{
 
 pub use ab1::*;
 pub use bond_inference::create_bonds;
-pub use gro::*;
+// pub use gro::*;
 use lin_alg::f64::Vec3;
-pub use map::*;
+// pub use map::*;
 pub use mmcif::*;
 pub use mol2::*;
 use na_seq::{AminoAcid, AtomTypeInRes, Element};
-pub use pdbqt::Pdbqt;
+// pub use pdbqt::Pdbqt;
 pub use sdf::*;
 pub use xyz::*;
 

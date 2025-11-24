@@ -12,7 +12,7 @@ use std::{
     str::FromStr,
 };
 
-use bio_apis::amber_geostd;
+// use bio_apis::amber_geostd;
 use lin_alg::f64::Vec3;
 use na_seq::{AtomTypeInRes, Element};
 
@@ -266,8 +266,11 @@ impl Mol2 {
 
                 // Fixes for an awkward part of atom names and elements derived from them in Mol2.
                 // it seems "CL" start does mean Chlorine.
-                if atom_name.starts_with("C") && !atom_name.starts_with("Ca") && !atom_name.starts_with("Cu")
-                    && !atom_name.to_uppercase().starts_with("CL") {
+                if atom_name.starts_with("C")
+                    && !atom_name.starts_with("Ca")
+                    && !atom_name.starts_with("Cu")
+                    && !atom_name.to_uppercase().starts_with("CL")
+                {
                     element = Element::Carbon;
                 }
 
@@ -477,9 +480,10 @@ impl Mol2 {
 
     /// Download  rom our Amber Geostd DB using a PDBe/Amber ID.
     pub fn load_amber_geostd(ident: &str) -> io::Result<Self> {
-        let data_str = amber_geostd::load_mol2(ident)
-            .map_err(|e| io::Error::other(format!("Error loading: {e:?}")))?;
-        Self::new(&data_str)
+        unimplemented!();
+        // let data_str = amber_geostd::load_mol2(ident)
+        //     .map_err(|e| io::Error::other(format!("Error loading: {e:?}")))?;
+        // Self::new(&data_str)
     }
 }
 
